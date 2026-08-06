@@ -1,0 +1,1 @@
+import{r as e,s as u}from"./index-BXCEKfoZ.js";function i(){const[r,c]=e.useState(null),[n,s]=e.useState(!0),a=e.useCallback(async()=>{s(!0);const{data:t,error:o}=await u.rpc("get_credit_balance");!o&&t&&!t.error&&c(t),s(!1)},[]);return e.useEffect(()=>{a()},[a]),{balance:r,loading:n,refresh:a}}export{i as u};

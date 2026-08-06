@@ -1,0 +1,1 @@
+import{j as t}from"./index-BXCEKfoZ.js";const o=()=>t.jsx("div",{"data-page":"mentoria",style:{position:"fixed",inset:0,background:"#000000"},children:t.jsx("iframe",{src:"/mentoria.html",title:"Aula ao vivo — MotelMind | Nova Motelaria",style:{width:"100%",height:"100%",border:"none",background:"#000000"}})});export{o as default};
