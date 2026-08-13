@@ -1,0 +1,1 @@
+import{r as i,j as p,N as m,p as x}from"./index-BHmWHXha.js";const c=i.forwardRef(({className:a,activeClassName:s,pendingClassName:r,to:t,...e},n)=>p.jsx(m,{ref:n,to:t,className:({isActive:o,isPending:N})=>x(a,o&&s,N&&r),...e}));c.displayName="NavLink";export{c as N};

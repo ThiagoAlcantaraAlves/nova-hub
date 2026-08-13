@@ -1,0 +1,1 @@
+import{j as a}from"./index-BHmWHXha.js";const t=()=>a.jsx("div",{"data-page":"lancamento",style:{position:"fixed",inset:0,background:"#0b1a2e"},children:a.jsx("iframe",{src:"/lancamento.html",title:"Lançamento — Nova Motelaria Hub",style:{width:"100%",height:"100%",border:"none",background:"#0b1a2e"}})});export{t as default};
