@@ -1,0 +1,1 @@
+import{r as a,B as i,s}from"./generateCategoricalChart-B4oZw2eG.js";import{X as r,Y as t}from"./subDays-xBVNeHWO.js";var p=a({chartName:"BarChart",GraphicalChild:i,defaultTooltipEventType:"axis",validateTooltipEventTypes:["axis","item"],axisComponents:[{axisType:"xAxis",AxisComp:r},{axisType:"yAxis",AxisComp:t}],formatAxisMap:s});export{p as B};

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lançamento — Nova Motelaria Hub · Pare de decidir no chute</title>
+<meta name="description" content="No dia 30 de junho, às 16h, ao vivo: o ecossistema que faz o moteleiro decidir com dados, não no chute. Inscrição gratuita." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Lato:wght@400;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet" />
+<style>
+:root{
+  --pitch:#08130d; --pitch2:#0d1d14; --panel:#0f2417; --line:#1c3a28;
+  --grass:#1fbf63; --grass-dim:#0f7a3e; --chalk:#eef4ee; --ink:#08130d;
+  --flood:#f5c542; --red:#e8413c; --muted:#86a394; --maxw:1080px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--pitch);color:var(--chalk);font-family:'Lato',system-ui,sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%);mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.mono{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.display{font-family:'Cinzel',serif;font-weight:700;text-transform:uppercase;line-height:.92;letter-spacing:1.5px}
+.kicker{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--grass)}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(8,19,13,.72);border-bottom:1px solid var(--line)}
+.navin{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--grass);box-shadow:0 0 12px var(--grass)}
+.navbadge{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--flood);border:1px solid var(--line);padding:6px 12px;border-radius:999px;white-space:nowrap}
+header{position:relative;padding:72px 0 40px;overflow:hidden}
+.flood{position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:900px;height:560px;background:radial-gradient(ellipse at center,rgba(245,197,66,.18),transparent 60%);pointer-events:none;z-index:1}
+.hero{position:relative;z-index:2;text-align:center}
+.hero h1{font-size:clamp(52px,11vw,128px);color:var(--chalk)}
+.hero h1 .g{color:var(--grass)}
+.hero .lead{max-width:640px;margin:22px auto 0;font-size:clamp(17px,2.4vw,21px);color:#cfe0d5}
+.hero .lead b{color:var(--chalk)}
+.goldline{width:80px;height:4px;background:var(--flood);margin:26px auto 0;border-radius:2px}
+.herofig{max-width:680px;margin:38px auto 0;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.herofig img{display:block;width:100%;height:auto}
+.cd{display:flex;gap:10px;justify-content:center;margin:34px auto 0;flex-wrap:wrap}
+.cd .u{background:var(--pitch2);border:1px solid var(--line);border-radius:12px;padding:14px 8px;min-width:74px}
+.cd .n{font-family:'Cinzel',serif;font-weight:700;font-size:40px;line-height:1;color:var(--chalk)}
+.cd .l{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.cdlabel{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--flood);margin-top:18px;text-align:center;display:none}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--grass);color:var(--ink);font-weight:800;font-size:16px;padding:16px 30px;border-radius:999px;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;box-shadow:0 8px 30px rgba(31,191,99,.32)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 38px rgba(31,191,99,.45)}
+.btn.ghost{background:transparent;color:var(--chalk);border:1px solid var(--line);box-shadow:none}
+.btn.ghost:hover{border-color:var(--grass);background:rgba(31,191,99,.08)}
+.ctawrap{margin:34px 0 0;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.proof{margin-top:18px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted)}
+.proof b{color:var(--grass)}
+section{padding:84px 0;position:relative}
+.shead{text-align:center;margin-bottom:48px}
+.shead h2{font-size:clamp(34px,6vw,64px);color:var(--chalk)}
+.shead h2 .g{color:var(--grass)}
+.shead p{color:var(--muted);max-width:560px;margin:14px auto 0;font-size:17px}
+.placar{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--pitch2)}
+.placar .side{padding:32px 28px}
+.placar .side h3{font-family:'Cinzel',serif;font-weight:700;text-transform:uppercase;font-size:26px;letter-spacing:.5px;margin-bottom:6px}
+.placar .chute h3{color:var(--red)} .placar .dado h3{color:var(--grass)}
+.placar .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.placar ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.placar li{display:flex;gap:10px;font-size:15.5px;color:#d6e4db;align-items:flex-start}
+.placar li i{flex:0 0 auto;font-size:20px;margin-top:1px}
+.placar .versus{display:flex;align-items:center;justify-content:center;background:var(--panel);padding:0 18px;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.placar .versus span{font-family:'Cinzel',serif;font-weight:700;font-size:30px;color:var(--flood)}
+.icoX{color:var(--red)} .icoV{color:var(--grass)}
+.time-note{text-align:center;max-width:680px;margin:0 auto 40px;font-size:18px;color:#cfe0d5}
+.time-note b{color:var(--grass)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.tool{background:var(--pitch2);border:1px solid var(--line);border-radius:14px;padding:22px;transition:border-color .2s ease,transform .2s ease}
+.tool:hover{border-color:var(--grass);transform:translateY(-3px)}
+.tool i{font-size:26px;color:var(--grass);margin-bottom:12px;display:block}
+.tool h4{font-size:16px;font-weight:800;margin-bottom:6px}
+.tool p{font-size:14px;color:var(--muted);line-height:1.5}
+.tool.more{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:transparent;border-style:dashed}
+.tool.more h4{color:var(--flood)}
+.event{background:linear-gradient(180deg,var(--panel),var(--pitch2));border:1px solid var(--line);border-radius:24px;padding:48px 36px;text-align:center;position:relative;overflow:hidden}
+.event::before{content:"";position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:520px;height:300px;background:radial-gradient(ellipse,rgba(31,191,99,.16),transparent 60%)}
+.event .when{font-family:'Cinzel',serif;font-weight:700;font-size:clamp(30px,5vw,52px);text-transform:uppercase;color:var(--chalk);position:relative}
+.event .when .g{color:var(--grass)} .event .sub{color:var(--muted);margin-top:10px;position:relative}
+#inscricao{padding-bottom:96px}
+.formcard{max-width:520px;margin:0 auto;background:var(--pitch2);border:1px solid var(--line);border-radius:24px;padding:40px 32px}
+.formcard h2{font-family:'Cinzel',serif;font-weight:700;text-transform:uppercase;font-size:34px;text-align:center;line-height:1;color:var(--chalk)}
+.formcard h2 .g{color:var(--grass)}
+.formcard .sub{text-align:center;color:var(--muted);margin:12px 0 26px;font-size:15px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:600}
+.field input{width:100%;background:var(--pitch);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--chalk);font-size:16px;font-family:inherit;transition:border-color .15s ease}
+.field input:focus{outline:none;border-color:var(--grass)}
+.err{color:var(--red);font-size:13px;min-height:18px;display:none;margin-top:2px}
+.fnote{text-align:center;font-size:12px;color:var(--muted);margin-top:14px}
+.statecard{text-align:center} .statecard>i{font-size:54px;color:var(--grass);margin-bottom:18px;display:block}
+.statecard h2{margin-bottom:10px} .statecard p{color:#cfe0d5}
+.livedot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 14px var(--red);animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.4}}
+footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--muted);font-size:13px;position:relative;z-index:2}
+.reveal{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1!important;transform:none!important}}
+@media(max-width:720px){.placar{grid-template-columns:1fr}.placar .versus{border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px}.navbadge{display:none}}
+section{scroll-margin-top:64px}
+/* ── Mobile: CTA na primeira dobra (reordena hero: texto → CTA → contador → imagem) ── */
+@media(max-width:640px){
+  header{padding:56px 0 28px}
+  .flood{top:-120px;width:680px;height:420px}
+  .hero .kicker{letter-spacing:1.5px;font-size:11px;line-height:1.45}
+  .hero{display:flex;flex-direction:column}
+  .hero .kicker{order:1}
+  .hero h1{order:2;margin-top:14px;font-size:clamp(44px,13vw,72px)}
+  .hero .lead{order:3;margin-top:16px;font-size:16px;max-width:none}
+  .hero .goldline{order:4;margin-top:20px}
+  .hero .ctawrap{order:5;margin-top:24px;width:100%;flex-direction:column;gap:10px}
+  .hero .ctawrap .btn{width:100%;justify-content:center;padding:16px 22px}
+  .hero .cd{order:6;margin-top:22px;gap:8px;flex-wrap:nowrap;width:100%}
+  .hero .cd .u{min-width:0;flex:1 1 0;padding:12px 4px}
+  .hero .cd .n{font-size:30px}
+  .hero #cdlabel{order:7}
+  .hero .proof{order:8;margin-top:16px}
+  .herofig{order:9;margin-top:28px}
+  section{padding:56px 0}
+  .shead{margin-bottom:32px}
+  .formcard{padding:30px 22px}
+  .placar .side{padding:26px 22px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="navin">
+  <div class="brand"><span class="dot"></span> Nova Motelaria Hub</div>
+  <div class="navbadge" id="badgeTxt">AO VIVO · 30 DE JUNHO · 16H</div>
+</div></nav>
+
+<header>
+  <div class="flood"></div>
+  <div class="wrap hero">
+    <p class="kicker reveal">Lançamento ao vivo · 30 de junho · 16h</p>
+    <h1 class="display reveal">Pare de decidir<br/>no <span class="g">chute</span>.</h1>
+    <p class="lead reveal">Se você tem informação, por que continua tomando decisão de motel no <b>palpite</b>? No dia 30/06 vamos te mostrar o ecossistema que troca o achismo por <b>dados</b> — feito pra motel, não adaptado de outro setor.</p>
+    <div class="goldline reveal"></div>
+    <figure class="herofig reveal"><img src="hero-chute.jpg" alt="Sapato social chutando uma bola de futebol sob os holofotes do estádio — pare de decidir no chute" /></figure>
+    <div class="cd reveal" id="cd">
+      <div class="u"><div class="n mono" id="cdD">00</div><div class="l">dias</div></div>
+      <div class="u"><div class="n mono" id="cdH">00</div><div class="l">horas</div></div>
+      <div class="u"><div class="n mono" id="cdM">00</div><div class="l">min</div></div>
+      <div class="u"><div class="n mono" id="cdS">00</div><div class="l">seg</div></div>
+    </div>
+    <div class="cdlabel" id="cdlabel">Oferta de lançamento encerra em</div>
+    <div class="ctawrap reveal">
+      <a href="#inscricao" class="btn">Garantir minha vaga <i class="ti ti-arrow-right"></i></a>
+      <a href="#placar" class="btn ghost">Como assim "no chute"?</a>
+    </div>
+    <p class="proof reveal" id="proof" hidden><b id="proofN">0</b> moteleiros já confirmados</p>
+  </div>
+</header>
+
+<section id="placar">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="kicker">O jogo de todo fim de semana</p>
+      <h2 class="display">No <span style="color:var(--red)">chute</span> vs. com o <span class="g">Hub</span></h2>
+      <p>O mesmo motel, duas formas de jogar. Uma deixa dinheiro na grama toda semana.</p>
+    </div>
+    <div class="placar reveal">
+      <div class="side chute">
+        <h3>No chute</h3><div class="tag">decisão no escuro</div>
+        <ul>
+          <li><i class="ti ti-ball-football icoX"></i> Preço da suíte no "acho que tá bom"</li>
+          <li><i class="ti ti-ball-football icoX"></i> Planilha genérica que não entende diária por hora</li>
+          <li><i class="ti ti-ball-football icoX"></i> Olha o concorrente — que olha você</li>
+          <li><i class="ti ti-ball-football icoX"></i> Marketing no feeling, sem saber o que converte</li>
+        </ul>
+      </div>
+      <div class="versus"><span>×</span></div>
+      <div class="side dado">
+        <h3>Com o Hub</h3><div class="tag">decisão com dados</div>
+        <ul>
+          <li><i class="ti ti-chart-line icoV"></i> IA de RevPAR calibrada pra diária fracionada</li>
+          <li><i class="ti ti-calculator icoV"></i> ECAD calculado, sem cobrança indevida</li>
+          <li><i class="ti ti-radar icoV"></i> Anúncios da concorrência na palma da mão</li>
+          <li><i class="ti ti-target-arrow icoV"></i> Cada decisão com o número na mesa</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="time">
+  <div class="wrap">
+    <div class="shead reveal">
+      <p class="kicker">Seu time completo</p>
+      <h2 class="display">Não é um <span class="g">app</span>.<br/>É o elenco inteiro.</h2>
+    </div>
+    <p class="time-note reveal">No Hub você joga com <b>todas as ferramentas que já criamos — e todas as que ainda vamos criar.</b> O time não para de crescer, e você entra com acesso a tudo que vier.</p>
+    <div class="grid reveal">
+      <div class="tool"><i class="ti ti-chart-line"></i><h4>IA de RevPAR</h4><p>Quanto cobrar agora, calibrado pra diária por período.</p></div>
+      <div class="tool"><i class="ti ti-calculator"></i><h4>Calculadora de ECAD</h4><p>O número certo, sem pagar a mais.</p></div>
+      <div class="tool"><i class="ti ti-radar"></i><h4>Análise da concorrência</h4><p>Os anúncios que o vizinho está rodando.</p></div>
+      <div class="tool"><i class="ti ti-layout-dashboard"></i><h4>Dashboard executivo</h4><p>O placar do seu motel em tempo real.</p></div>
+      <div class="tool"><i class="ti ti-messages"></i><h4>CRM + Disparos</h4><p>Atendimento e WhatsApp num lugar só.</p></div>
+      <div class="tool more"><h4>+ o que vem por aí</h4><p>Cada ferramenta nova entra pro seu time. Sem pagar de novo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="evento">
+  <div class="wrap"><div class="event reveal">
+    <p class="kicker" style="position:relative">A hora da decisão</p>
+    <div class="when">Terça, <span class="g">30 de junho</span><br/>16h · ao vivo</div>
+    <p class="sub">Demonstração real, sem roteiro ensaiado · os planos do Hub · e uma condição de lançamento que não se repete.</p>
+    <div class="ctawrap" style="justify-content:center"><a href="#inscricao" class="btn">Quero participar <i class="ti ti-arrow-right"></i></a></div>
+  </div></div>
+</section>
+
+<section id="inscricao"><div class="wrap">
+  <div class="formcard reveal" id="phasePre">
+    <h2 class="display">Entra em <span class="g">campo</span></h2>
+    <p class="sub">Inscrição gratuita. O link da live chega no seu WhatsApp e e-mail na véspera.</p>
+    <form id="regForm" novalidate>
+      <div class="field"><label for="fname">Nome</label><input id="fname" type="text" placeholder="Seu nome completo" autocomplete="name"/></div>
+      <div class="field"><label for="fwa">WhatsApp</label><input id="fwa" type="tel" placeholder="(00) 00000-0000" autocomplete="tel"/></div>
+      <div class="field"><label for="fmail">E-mail</label><input id="fmail" type="email" placeholder="seu@email.com" autocomplete="email"/></div>
+      <p class="err" id="ferr"></p>
+      <button type="submit" class="btn" id="fbtn" style="width:100%;justify-content:center">Quero participar do lançamento</button>
+      <p class="fnote">Acesso gratuito · sem spam · link direto no WhatsApp</p>
+    </form>
+  </div>
+  <div class="formcard statecard reveal" id="phaseDone" hidden>
+    <i class="ti ti-circle-check"></i>
+    <h2 class="display">Vaga <span class="g">confirmada!</span></h2>
+    <p>Você está dentro do lançamento do Nova Motelaria Hub — ao vivo em <b style="color:var(--chalk)">30 de junho, 16h</b>.<br/>Salve a data. O link chega no seu WhatsApp e e-mail na véspera.</p>
+  </div>
+  <div class="formcard statecard" id="phaseLive" hidden>
+    <span class="livedot"></span>
+    <h2 class="display" style="margin-top:18px">Estamos <span class="g">ao vivo!</span></h2>
+    <p>Acesse pelo link enviado no seu WhatsApp ou e-mail.</p>
+    <div class="ctawrap" style="justify-content:center"><a class="btn" id="liveBtn" hidden target="_blank" rel="noopener">Entrar no evento <i class="ti ti-external-link"></i></a></div>
+  </div>
+  <div class="formcard statecard" id="phaseOffer" hidden>
+    <i class="ti ti-trophy"></i>
+    <h2 class="display">A oferta está <span class="g">aberta</span></h2>
+    <p>Bônus e condições de lançamento até <b style="color:var(--chalk)">23h59 de domingo, 5 de julho</b>. Depois, não se repetem.</p>
+    <div class="ctawrap" style="justify-content:center"><a class="btn" href="/planos" target="_top">Ver os planos <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+  <div class="formcard statecard" id="phaseEnded" hidden>
+    <i class="ti ti-whistle"></i>
+    <h2 class="display">Apito <span class="g">final</span></h2>
+    <p>O lançamento encerrou. Os planos do Hub seguem disponíveis.</p>
+    <div class="ctawrap" style="justify-content:center"><a class="btn ghost" href="/planos" target="_top">Ver os planos</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© <span id="yy"></span> Nova Motelaria Hub · Escola de Motelaria · decida com dados, não no chute</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+/* ═══ Config (mesmas datas do app) ═══ */
+const EVENT_DATE = new Date("2026-06-30T16:00:00-03:00");
+const LIVE_END   = new Date("2026-06-30T23:59:59-03:00");
+const OFFER_END  = new Date("2026-07-05T23:59:59-03:00");
+const EVENT_LIVE_URL = ""; // preencher antes de 30/06
+const SB_URL  = "https://cmrydpojogzofzfzwjhi.supabase.co";
+const SB_ANON = "sb_publishable_t1GiiI-Xev-EgWr7JQw-rQ_-U5sf6TC";
+const $ = id => document.getElementById(id);
+$("yy").textContent = new Date().getFullYear();
+
+/* ═══ Fases ═══ */
+function getPhase(){const n=Date.now();if(n>=OFFER_END.getTime())return"ended";if(n>=LIVE_END.getTime())return"offer";if(n>=EVENT_DATE.getTime())return"live";return"pre"}
+let phase=getPhase(), done=false;
+function applyPhase(){
+  const p=phase;
+  $("phasePre").hidden   = !(p==="pre" && !done);
+  $("phaseDone").hidden  = !(p==="pre" && done);
+  $("phaseLive").hidden  = p!=="live";
+  $("phaseOffer").hidden = p!=="offer";
+  $("phaseEnded").hidden = p!=="ended";
+  $("cd").style.display      = (p==="pre"||p==="offer") ? "flex" : "none";
+  $("cdlabel").style.display = p==="offer" ? "block" : "none";
+  $("badgeTxt").textContent  = p==="offer" ? "OFERTA · ATÉ DOMINGO 05/07" : "AO VIVO · 30 DE JUNHO · 16H";
+  if(EVENT_LIVE_URL){ $("liveBtn").href=EVENT_LIVE_URL; $("liveBtn").hidden=false; }
+}
+applyPhase();
+
+/* ═══ Countdown ═══ */
+const pad=n=>String(n).padStart(2,"0");
+function tick(){
+  const target=phase==="offer"?OFFER_END:EVENT_DATE;
+  const s=Math.floor(Math.max(0,target.getTime()-Date.now())/1000);
+  $("cdD").textContent=pad(Math.floor(s/86400));
+  $("cdH").textContent=pad(Math.floor((s%86400)/3600));
+  $("cdM").textContent=pad(Math.floor((s%3600)/60));
+  $("cdS").textContent=pad(s%60);
+  const np=getPhase(); if(np!==phase){phase=np;applyPhase();}
+}
+tick(); setInterval(tick,1000);
+
+/* ═══ Social proof (silencioso) ═══ */
+fetch(SB_URL+"/rest/v1/event_registrations?select=id",{method:"HEAD",headers:{apikey:SB_ANON,Authorization:"Bearer "+SB_ANON,Prefer:"count=exact"}})
+.then(r=>{const cr=r.headers.get("content-range");const n=cr?parseInt(cr.split("/")[1],10):NaN;if(Number.isFinite(n)&&n>4){$("proofN").textContent=n;$("proof").hidden=false;}}).catch(()=>{});
+
+/* ═══ Form → edge function (fallback: REST insert) ═══ */
+const EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const isWA=v=>{const d=v.replace(/\D/g,"");return d.length>=10&&d.length<=11};
+const hideErr=()=>{$("ferr").style.display="none"};
+const showErr=m=>{$("ferr").textContent=m;$("ferr").style.display="block"};
+["fname","fwa","fmail"].forEach(id=>$(id).addEventListener("focus",hideErr));
+$("fmail").addEventListener("blur",()=>{const v=$("fmail").value.trim();if(v&&!EMAIL_RE.test(v))showErr("Informe um e-mail válido.")});
+$("fwa").addEventListener("blur",()=>{const v=$("fwa").value.trim();if(v&&!isWA(v))showErr("WhatsApp inválido. Use DDD + número (ex: 47 99123-4567).")});
+
+$("regForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  const name=$("fname").value.trim(), whatsapp=$("fwa").value.trim(), email=$("fmail").value.trim();
+  const btn=$("fbtn");
+  const fail=(m,el)=>{showErr(m);if(el)el.focus()};
+  hideErr();
+  if(!name||!whatsapp||!email) return fail("Preencha todos os campos.", !name?$("fname"):!whatsapp?$("fwa"):$("fmail"));
+  if(!EMAIL_RE.test(email)) return fail("Informe um e-mail válido.", $("fmail"));
+  if(!isWA(whatsapp)) return fail("WhatsApp inválido. Use DDD + número (ex: 47 99123-4567).", $("fwa"));
+  btn.disabled=true; btn.textContent="Registrando...";
+  let ok=false;
+  try{const r=await fetch(SB_URL+"/functions/v1/register-event",{method:"POST",headers:{"Content-Type":"application/json",apikey:SB_ANON,Authorization:"Bearer "+SB_ANON},body:JSON.stringify({name,whatsapp,email})});ok=r.ok}catch(_){}
+  if(!ok){try{const r2=await fetch(SB_URL+"/rest/v1/event_registrations",{method:"POST",headers:{"Content-Type":"application/json",apikey:SB_ANON,Authorization:"Bearer "+SB_ANON,Prefer:"return=minimal"},body:JSON.stringify({name,whatsapp,email})});ok=r2.ok}catch(_){}}
+  btn.disabled=false; btn.textContent="Quero participar do lançamento";
+  if(!ok) return fail("Erro ao registrar. Tente novamente.");
+  done=true; applyPhase();
+  const n=parseInt($("proofN").textContent,10); if(Number.isFinite(n)){$("proofN").textContent=n+1;}
+  window.scrollTo({top:$("inscricao").offsetTop-40,behavior:"smooth"});
+});
+
+/* ═══ Reveals ═══ */
+try{
+  if(window.gsap && !matchMedia("(prefers-reduced-motion: reduce)").matches){
+    gsap.from(".hero .reveal",{opacity:0,y:30,duration:.9,stagger:.1,ease:"power3.out",delay:.05});
+    const io=new IntersectionObserver(es=>{es.forEach(x=>{if(x.isIntersecting){gsap.from(x.target,{opacity:0,y:26,duration:.8,ease:"power3.out"});io.unobserve(x.target);}})},{threshold:.12});
+    document.querySelectorAll("section .reveal").forEach(el=>io.observe(el));
+  }
+}catch(_){}
+</script>
+</body>
+</html>

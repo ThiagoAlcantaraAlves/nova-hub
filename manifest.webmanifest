@@ -1,0 +1,22 @@
+{
+  "name": "Nova Motelaria Hub",
+  "short_name": "Hub Motelaria",
+  "description": "Ferramentas, painel e equipe de IA do seu motel, direto no celular.",
+  "id": "/dashboard",
+  "start_url": "/dashboard?origem=app",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "lang": "pt-BR",
+  "background_color": "#0B1D36",
+  "theme_color": "#0B1D36",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Ferramentas", "url": "/ferramentas" },
+    { "name": "Equipe de IA", "url": "/equipe-ia" }
+  ]
+}
