@@ -1,0 +1,1 @@
+import{s as e}from"./index-jWeqikei.js";const r=()=>e.from("tutor_messages");function p(s){return s.flatMap(t=>[{id:`${t.id}-user`,role:"user",parts:[{type:"text",text:t.pergunta}]},...t.resposta?[{id:t.id,role:"assistant",parts:[{type:"text",text:t.resposta}]}]:[]])}export{p as a,r as t};
